@@ -213,8 +213,9 @@ all_distances = {node: dijkstra(G, node) for node in G.nodes}
 print("-" * 40)
 print("Найкоротші відстані між усіма парами вершин:")
 for source in all_distances:
+    print("-" * 40)
     for target in all_distances[source]:
-        print(f"Від {source} до {target}: відстань {all_distances[source][target]}")
+        print(f"{f'Від {source} до {target}:':<60}{all_distances[source][target]:<10} метрів")
 
 plt.title("Харківський метрополітен з вагами (відстані в метрах)", fontsize=16)
 plt.show()
